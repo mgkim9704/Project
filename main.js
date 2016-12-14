@@ -74,7 +74,7 @@ function init() {
 	document.addEventListener('dragover', onDocumentDragOver, false);
 
 	onWindowResize(null);
-	audioContext = new window.webkitAudioContext();
+	audioContext = new window.AudioContext();
 
 }
 
