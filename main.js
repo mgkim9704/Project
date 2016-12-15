@@ -45,8 +45,7 @@ nx.onload = function() {
 		biquad.frequency.value=Math.pow(20000,data.x);
 		biquad.Q.value = 10*data.y;
 	});
-	biquad.frequency.value=21000
-	biquad.Q.value=0
+
 }
 
 function init() {
@@ -176,6 +175,11 @@ function render() {
 
 	renderer.render(scene, camera);
 }
+
+$(window).mouseup(function(){
+	biquad.frequency.value=21000;
+	biguad.Q.value=0;
+});
 
 $(window).mousewheel(function(event, delta) {
 	//set camera Z
