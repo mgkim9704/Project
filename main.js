@@ -38,6 +38,16 @@ $(document).ready(function() {
 
 });
 
+nx.onload = function() {
+
+	// OSC
+	gui_lfo_rate.set({ value: synth_params.lfoRate })
+	gui_lfo_rate.on('*',function(data) {
+		biquad.frequency.value=Math.pow(20000,data.x);
+		biquad.Q.value = 40*data.y;
+	});
+}
+
 function init() {
 
 	//init 3D scene
@@ -228,7 +238,11 @@ function createAudio() {
 	analyser.smoothingTimeConstant = 0.1;
 	analyser.fftSize = 1024;
 
-	source.connect(audioContext.destination);
+	biquad= context.createBiquadFilter();
+	biquadFilter.type = "lowpass";
+	
+	source.connect(biquad);
+	biquad.connect(audioContext.destination);
 	source.connect(analyser);
 	source.start(0);
 	source.loop = true;
