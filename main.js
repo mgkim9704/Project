@@ -41,8 +41,7 @@ $(document).ready(function() {
 nx.onload = function() {
 
 	// OSC
-	gui_lfo_rate.set({ value: synth_params.lfoRate })
-	gui_lfo_rate.on('*',function(data) {
+	position1.on('*',function(data) {
 		biquad.frequency.value=Math.pow(20000,data.x);
 		biquad.Q.value = 40*data.y;
 	});
