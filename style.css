@@ -14,6 +14,11 @@ h1 {
 	width: 100%;
 }
 
+#osc {
+	position: absolute;
+	z-index: 100;
+}
+
 #info {
 	position: absolute;
 	bottom: 20px;
