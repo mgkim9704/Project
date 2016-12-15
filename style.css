@@ -14,13 +14,17 @@ h1 {
 	width: 100%;
 }
 
-#Mixer {
+#Scratch {
 	position: absolute;
+	bottom: 100px;
+	width: 100%;
 	z-index: 100;
 }
 
-#Scratch {
+#Mixer {
 	position: absolute;
+	width: 100%;
+	bottom: 50px;
 	z-index: 100;
 }
 
