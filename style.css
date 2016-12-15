@@ -14,7 +14,12 @@ h1 {
 	width: 100%;
 }
 
-#osc {
+#Mixer {
+	position: absolute;
+	z-index: 100;
+}
+
+#Scratch {
 	position: absolute;
 	z-index: 100;
 }
