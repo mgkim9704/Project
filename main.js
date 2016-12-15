@@ -237,7 +237,7 @@ function createAudio() {
 	analyser.smoothingTimeConstant = 0.1;
 	analyser.fftSize = 1024;
 
-	biquad= context.createBiquadFilter();
+	biquad= audioContext.createBiquadFilter();
 	biquadFilter.type = "lowpass";
 	
 	source.connect(biquad);
