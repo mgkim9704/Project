@@ -41,7 +41,7 @@ $(document).ready(function() {
 nx.onload = function() {
 
 	// OSC
-	position1.on('*',function(data) {
+	position.on('*',function(data) {
 		biquad.frequency.value=Math.pow(20000,data.x);
 		biquad.Q.value = 40*data.y;
 	});
