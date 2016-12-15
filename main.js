@@ -238,7 +238,7 @@ function createAudio() {
 	analyser.fftSize = 1024;
 
 	biquad= audioContext.createBiquadFilter();
-	biquadFilter.type = "lowpass";
+	biquad.type = "lowpass";
 	
 	source.connect(biquad);
 	biquad.connect(audioContext.destination);
