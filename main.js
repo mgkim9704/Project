@@ -42,7 +42,7 @@ nx.onload = function() {
 
 	// OSC
 	gui_filter_freq.on('*',function(data) {
-		biquad.frequency.value=80+Math.pow(20000,data.x);
+		biquad.frequency.value=60+Math.pow(20000,data.x);
 		biquad.Q.value = 10*data.y;
 	});
 
