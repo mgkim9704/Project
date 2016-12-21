@@ -15,16 +15,19 @@ h1 {
 }
 
 #Scratch {
+	position: absolute;
 	width: 100%;
 	z-index: 100;
 }
 
 #Filter {
+	position: absolute;
 	width: 100%;
 	z-index: 100;
 }
 
 #CrossFade {
+	position: absolute;
 	width: 100%;
 	z-index: 100;
 }
